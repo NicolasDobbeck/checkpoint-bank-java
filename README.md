@@ -1,15 +1,13 @@
-# CheckPoint - BANK
+# ☕ CheckPoint - BANK
 
 ## Índice
 - Instalação
 - Execução
 - Tecnologias
-- Instalação
-
 
 ## Clone o repositório:
 
-```github
+```
     git clone https://github.com/usuario/nome-do-repositorio.git
 ``` 
 
