@@ -1,4 +1,4 @@
-# CheckPoint - Java Advanced - BANK
+# CheckPoint - BANK
 
 ## Índice
 - Instalação
@@ -31,8 +31,7 @@ mvn clean install
 ```mvn
 mvn spring-boot:run
 ```
-2. 
-Acesse http://localhost:8080 no navegador.
+2. Acesse http://localhost:8080 no navegador.
 
 ## Tecnologias
 - Backend: Java com Spring Boot
