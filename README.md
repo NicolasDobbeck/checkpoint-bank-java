@@ -8,13 +8,13 @@
 ## Clone o repositório:
 
 ```
-    git clone https://github.com/usuario/nome-do-repositorio.git
+git clone https://github.com/usuario/checkpoint-bank-java
 ``` 
 
 ## Acesse o diretório do projeto:
 
-```powershell 
-cd nome-do-repositorio
+```
+cd checkpoint-bank-java
 ```
 
 ## Compile e instale as dependências:
@@ -29,7 +29,8 @@ mvn clean install
 ```mvn
 mvn spring-boot:run
 ```
-2. Acesse http://localhost:8080 no navegador.
+2. A execução é feita via insomnia, onde dentro do projeto há uma coleção com todas as requisições prontas.
+   - Nome da coleção: "Insomnia_2025-03-16.json"
 
 ## Tecnologias
 - Backend: Java com Spring Boot
