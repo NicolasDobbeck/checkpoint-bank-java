@@ -1,5 +1,6 @@
 # ☕ CheckPoint - BANK
 
+## Integrantes
 | Nome    | Git |
 | ---      | ---       |
 | José Bastos |   [jjosebastos](https://github.com/jjosebastos)      |
