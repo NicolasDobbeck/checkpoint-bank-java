@@ -1,5 +1,11 @@
 # ☕ CheckPoint - BANK
 
+## Integrantes
+| Nome    | Git |
+| ---      | ---       |
+| José Bastos |   [jjosebastos](https://github.com/jjosebastos)      |
+| Nicolas Dobbeck     |  [NicolasDobbeck](https://github.com/NicolasDobbeck)    |
+
 ## Índice
 - Instalação
 - Execução
