@@ -163,7 +163,7 @@ public class ContaCorrenteController {
         repository.remove(conta);
         repository.add(conta);
         
-        return ResponseEntity.ok(conta);
+        return ResponseEntity.noContent().build();
 
     }
 

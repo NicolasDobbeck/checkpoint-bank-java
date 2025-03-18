@@ -1,8 +1,8 @@
-package com.fiap.bank.dao;
+package com.fiap.bank.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class PixDao {
+public class PixDto {
     @JsonProperty("idOrigem")
     private Long idOrigem;
     @JsonProperty("idDestino")
