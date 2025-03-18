@@ -3,8 +3,6 @@ package com.fiap.bank.controller;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,11 +18,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-import com.fiap.bank.dao.PixDao;
-import com.fiap.bank.dao.TransacaoDao;
+
+import com.fiap.bank.dto.PixDto;
+import com.fiap.bank.dto.TransacaoDto;
 import com.fiap.bank.model.ContaCorrente;
 
-import lombok.val;
 
 @RestController
 @RequestMapping("/cc")
@@ -69,7 +67,7 @@ public class ContaCorrenteController {
     }
     
     @PutMapping("/deposito")
-    public ResponseEntity<ContaCorrente> deposito(@RequestBody TransacaoDao deposito){
+    public ResponseEntity<ContaCorrente> deposito(@RequestBody TransacaoDto deposito){
         if(deposito.getIdConta() == null || deposito.getValor() <= 0){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
@@ -91,7 +89,7 @@ public class ContaCorrenteController {
     }
 
     @PutMapping("/saque")
-    public ResponseEntity<?> saque(@RequestBody TransacaoDao saque){
+    public ResponseEntity<?> saque(@RequestBody TransacaoDto saque){
         if(saque.getIdConta() == null || saque.getValor() <= 0){
             return ResponseEntity.badRequest()
                     .body(Map.of("erro", "ID da conta é obrigatório e o valor do saque deve ser positivo."));
@@ -114,7 +112,7 @@ public class ContaCorrenteController {
     }
 
     @PutMapping("/pix")
-    public ResponseEntity<?> pix(@RequestBody PixDao pix){
+    public ResponseEntity<?> pix(@RequestBody PixDto pix){
         
         if(pix.getIdOrigem() == null || pix.getIdDestino() == null || pix.getValor() <= 0){
             return ResponseEntity.badRequest().body(null);
@@ -181,7 +179,7 @@ public class ContaCorrenteController {
     private ContaCorrente findById(Long id) {
         return repository
                     .stream()
-                    .filter(c -> c.getId().equals(id))
+                    .filter(c -> c.getId().equals(id) && c.isActive())
                     .findFirst()
                     .orElseThrow(()->
                         new ResponseStatusException(HttpStatus.NOT_FOUND)

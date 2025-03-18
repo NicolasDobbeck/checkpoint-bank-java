@@ -1,8 +1,8 @@
-package com.fiap.bank.dao;
+package com.fiap.bank.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TransacaoDao {
+public class TransacaoDto {
     @JsonProperty("id")
     private Long idConta;
     @JsonProperty("valor")

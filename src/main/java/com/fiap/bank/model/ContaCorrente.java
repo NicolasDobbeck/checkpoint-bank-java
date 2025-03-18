@@ -99,7 +99,7 @@ public class ContaCorrente {
         this.tipoConta = tipoConta;
     }
 
-    public boolean isStatus() {
+    public boolean isActive() {
         return status;
     }
 
